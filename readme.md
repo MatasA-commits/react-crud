@@ -24,17 +24,24 @@ VĖLIAU
 <div style="padding-left: 40px">
 
 ### Installation
-in terminal run command
->```npm i ```
+Open terminal in __./client__ folder and run:
+```bash
+npm install
+```
 
-### Lounch for development
-in terminal run command
-> ```npm run start```
+### Launch for development
+Open terminal in __./client__ folder and run:
+```bash
+npm start
+```
 
-### Lounch for production
-in terminal run command
-> ```npm run build```
+### Launch for production
+Open terminal in __./client__ folder and run:
+```bash
+npm run build
+```
 </div>
 
+
 ## View Code
-to view code in github click [here](https://github.com/MatasA-commits/react-crud)
+To view code in online editor click [here](https://github.com/MatasA-commits/react-crud).
