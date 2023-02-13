@@ -1,22 +1,27 @@
 # React CRUD App
 
 ## System requirements
-... Jūsų aprašymas ---
+* [Node.js](https://nodejs.org/en/) v16 or later
+  
+To view application, you must launch server and client apps.
+Make sure you lauched Server application first, only then launch Client.
 
-To view applications, you must launch server and client apps.
-Make sure you louched server application first, only then Client.
 
 ## Launching Server application
 <div style="padding-left: 40px">
 
 ### Installation
-VĖLIAU
+Open terminal in __./server__ folder and run: 
 
-### Lounch for development
-VĖLIAU
+```bash
+npm install
+```
 
-### Lounch for production
-VĖLIAU
+### Launch
+Open terminal in __./server__ folder and run:
+```bash
+npm run server
+``` 
 </div>
 
 ## Launching Client application
