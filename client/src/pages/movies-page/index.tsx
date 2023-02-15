@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box } from '@mui/material';
-import MovieModel from 'models/movie-model';
 import ApiService from '../../services/api-service';
+import * as Styled from './styled';
+import MovieCard from './movie-card/index';
 
-const HomePage = () => {
+const MoviesPage = () => {
   const [movies, setMovies] = React.useState<MovieModel[]>([]);
 
   React.useEffect(() => {
@@ -14,12 +14,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Box>
-      <Box component="pre">
-        {JSON.stringify(movies, null, 4)}
-      </Box>
-    </Box>
+    <Styled.MovieCardGrid>
+      {movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
+    </Styled.MovieCardGrid>
   );
 };
 
-export default HomePage;
+export default MoviesPage;

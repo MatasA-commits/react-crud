@@ -9,5 +9,3 @@ type MovieModel = {
   year: string,
   rating: number
 };
-
-export default MovieModel;
