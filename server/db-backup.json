@@ -38,7 +38,6 @@
         "role": "James Bond"
       },
       "images": [
-        "https://static.wikia.nocookie.net/jamesbond/images/9/93/UK_Skyfall_Poster.jpg/revision/latest?cb=20220525062605",
         "https://media.vanityfair.com/photos/54ca91a3b8f23e3a0313ce98/master/w_2560%2Cc_limit/image.jpg",
         "https://www.denofgeek.com/wp-content/uploads/2022/11/james-bond-skyfall.jpg?fit=2048%2C1169"
       ],
@@ -83,7 +82,6 @@
         "role": "Tommy"
       },
       "images": [
-        "https://pics.filmaffinity.com/Dunkirk-807779959-large.jpg",
         "https://i.ytimg.com/vi/F-eMt3SrfFU/maxresdefault.jpg",
         "https://m.media-amazon.com/images/M/MV5BNjUwMjg0NTY5MV5BMl5BanBnXkFtZTgwODcyOTIyMjI@._V1_.jpg"
       ],
@@ -180,7 +178,5 @@
       "year": "2021",
       "rating": 6.4
     }
-
-    
   ]
 }

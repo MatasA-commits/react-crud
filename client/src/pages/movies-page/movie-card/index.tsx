@@ -6,9 +6,10 @@ import {
   Button,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Img from 'components/ui/img';
 import routes from 'navigation/routes';
+import Img from 'components/ui/img';
 import * as Styled from './styled';
+import ApiService from '../../../services/api-service';
 
 type MovieCardProps = MovieModel;
 
@@ -24,8 +25,22 @@ const MovieCard: React.FC<MovieCardProps> = (
 ) => {
   const navigate = useNavigate();
   return (
-    <Stack sx={{ boxShadow: 3 }}>
+    <Stack sx={{ boxShadow: 3, position: 'relative' }}>
       <Img src={images[0]} alt="" sx={{ aspectRatio: '1.42', width: 1 }} />
+      <Styled.AdminActions>
+        <Button variant="contained" color="warning" size="small">
+          Update
+        </Button>
+        <Button
+          variant="contained"
+          color="error"
+          size="small"
+          id={id}
+          onClick={(event) => ApiService.deleteMovie(event.currentTarget.id)}
+        >
+          Delete
+        </Button>
+      </Styled.AdminActions>
       <Styled.ContentWrapper>
         <Box sx={{ flexGrow: 1 }}>
 

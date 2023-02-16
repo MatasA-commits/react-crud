@@ -2,6 +2,8 @@ import React from 'react';
 import ApiService from '../../services/api-service';
 import * as Styled from './styled';
 import MovieCard from './movie-card/index';
+import { Container } from '../movie-form-page/styled';
+import Header from './header';
 
 const MoviesPage = () => {
   const [movies, setMovies] = React.useState<MovieModel[]>([]);
@@ -14,9 +16,13 @@ const MoviesPage = () => {
   }, []);
 
   return (
-    <Styled.MovieCardGrid>
-      {movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
-    </Styled.MovieCardGrid>
+    <Container>
+      <Header />
+      <Styled.MovieCardGrid>
+        {movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
+      </Styled.MovieCardGrid>
+    </Container>
+
   );
 };
 

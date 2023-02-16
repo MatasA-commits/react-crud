@@ -20,9 +20,19 @@ const fetchMovie = async (id: string | number) => {
   return data;
 };
 
+const postMovie = async (movieData: MovieModel) => {
+  await api.post('/movies', movieData);
+};
+
+const deleteMovie = async (id: string | number) => {
+  await api.delete(`/movies/${id}`);
+};
+
 const ApiService = {
   fetchMovies,
   fetchMovie,
+  postMovie,
+  deleteMovie,
 };
 
 export default ApiService;
