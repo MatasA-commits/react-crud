@@ -36,7 +36,10 @@ const MovieCard: React.FC<MovieCardProps> = (
           color="error"
           size="small"
           id={id}
-          onClick={(event) => ApiService.deleteMovie(event.currentTarget.id)}
+          onClick={(event) => {
+            ApiService.deleteMovie(event.currentTarget.id);
+            window.location.reload();
+          }}
         >
           Delete
         </Button>

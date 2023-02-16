@@ -60,6 +60,35 @@
       "rating": 7.2
     },
     {
+      "id": "5",
+      "title": "1917",
+      "main_character": {
+        "actor": "George MacKay",
+        "role": "Lance Corporal Schofield"
+      },
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg",
+        "https://media.cnn.com/api/v1/images/stellar/prod/191219200337-1917-movie.jpg?q=w_4500,h_3000,x_0,y_0,c_fill",
+        "http://media.forumcinemas.lt/1012/Event_10162/gallery/1917-filmas-8.jpg"
+      ],
+      "year": "2019",
+      "rating": 8.2
+    },
+    {
+      "id": "6",
+      "title": "Dunkirk",
+      "main_character": {
+        "actor": "Fionn Whitehead",
+        "role": "Tommy"
+      },
+      "images": [
+        "https://i.ytimg.com/vi/F-eMt3SrfFU/maxresdefault.jpg",
+        "https://m.media-amazon.com/images/M/MV5BNjUwMjg0NTY5MV5BMl5BanBnXkFtZTgwODcyOTIyMjI@._V1_.jpg"
+      ],
+      "year": "2017",
+      "rating": 7.8
+    },
+    {
       "id": "7",
       "title": "All Quiet on the Western Front",
       "main_character": {
