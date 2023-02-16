@@ -11,7 +11,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import uniqid from 'uniqid';
 import routes from 'navigation/routes';
 import ImagesField from './images-field';
-import LocationField from './main-character-field';
+import MainCharacterField from './main-character-field';
 import * as Styled from './styled';
 import ApiService from '../../services/api-service';
 
@@ -76,7 +76,7 @@ const MovieFormPage: React.FC<MovieFormPageProps> = () => {
         <Typography variant="h4" sx={{ textAlign: 'center' }}>Add movie</Typography>
         <Stack sx={{ gap: 1, mt: 2 }}>
           <TextField label="Title" fullWidth variant="filled" name="title" required />
-          <LocationField />
+          <MainCharacterField />
           <ImagesField />
 
           <TextField

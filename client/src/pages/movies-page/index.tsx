@@ -16,7 +16,7 @@ const MoviesPage = () => {
   }, []);
 
   return (
-    <Container>
+    <Container paddingTop={10}>
       <Header />
       <Styled.MovieCardGrid>
         {movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}

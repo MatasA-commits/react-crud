@@ -4,7 +4,7 @@ import React from 'react'; import {
   Box,
 } from '@mui/material';
 
-const LocationField = () => (
+const MainCharacterField = () => (
   <Box>
     <Typography variant="subtitle1" sx={{ pl: 1 }}>Main character</Typography>
     <Box sx={{ display: 'flex', gap: 2 }}>
@@ -14,4 +14,4 @@ const LocationField = () => (
   </Box>
 );
 
-export default LocationField;
+export default MainCharacterField;
