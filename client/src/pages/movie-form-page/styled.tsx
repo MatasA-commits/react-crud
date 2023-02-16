@@ -8,15 +8,13 @@ import {
 
 export const Container = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(1),
-  alignItems: 'center',
+  alignItems: 'right',
 
   [theme.breakpoints.up('sm')]: {
-    paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
   },
 
   [theme.breakpoints.up('sm')]: {
-    paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
   },
 }));

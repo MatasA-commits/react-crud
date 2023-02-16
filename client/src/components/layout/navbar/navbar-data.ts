@@ -3,7 +3,7 @@ import { type Breakpoint } from '@mui/material';
 import type LinkData from './link-data';
 
 export const linksData: LinkData[] = [
-  { link: routes.MoviesPage, text: 'Home' },
+  { link: routes.MoviesPage, text: 'Movies' },
 ];
 
 export const linksGroups = [];

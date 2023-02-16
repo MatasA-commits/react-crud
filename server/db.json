@@ -148,19 +148,6 @@
       ],
       "year": "2021",
       "rating": 6.4
-    },
-    {
-      "id": "le73nbr0",
-      "title": "test",
-      "main_character": {
-        "actor": "test",
-        "role": "test"
-      },
-      "images": [
-        "https://m.media-amazon.com/images/M/MV5BMDE0ZjMzOTAtMzU2OS00ZDVmLWFlMjYtMThlOWYwMDBiN2E3XkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg"
-      ],
-      "year": "1999",
-      "rating": 4.6
     }
   ]
 }
