@@ -63,7 +63,6 @@ const MovieCard: React.FC<MovieCardProps> = (
         </Box>
 
         <Styled.ButtonContainer>
-          <Button color="secondary" variant="outlined">Add to list</Button>
           <Button
             color="primary"
             variant="contained"

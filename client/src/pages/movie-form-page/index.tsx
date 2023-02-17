@@ -30,17 +30,18 @@ const MovieFormPage: React.FC<MovieFormPageProps> = ({ mode = 'create' }) => {
 
   const navigateToMovies = () => navigate(routes.MoviesPage);
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     if (formRef.current === null) return;
 
     try {
       const values = formatValues(formRef.current);
       if (mode === 'create') {
-        ApiService.postMovie(values);
-      } else {
-        console.log('Daromas atnaujinimas', id);
-        console.log(values);
+        const { status } = await ApiService.postMovie(values);
+        if (status !== 201) throw new Error('Error while adding movie');
+      } else if (id !== undefined) {
+        const { status } = await ApiService.updateMovie(values, id);
+        if (status !== 200) throw new Error('Error while updating movie');
       }
       navigateToMovies();
     } catch (error) {

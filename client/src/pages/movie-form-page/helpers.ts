@@ -1,5 +1,3 @@
-import uniqid from 'uniqid';
-
 export const formatValues = (form: HTMLFormElement) => {
   const formData = new FormData(form);
 
