@@ -8,6 +8,12 @@ import Header from './header';
 const MoviesPage = () => {
   const [movies, setMovies] = React.useState<MovieModel[]>([]);
 
+  const onDelete = async (id: string | number) => {
+    await ApiService.deleteMovie(id);
+    const fetchedMovieData = await ApiService.fetchMovies();
+    setMovies(fetchedMovieData);
+  };
+
   React.useEffect(() => {
     (async () => {
       const fetchedMovies = await ApiService.fetchMovies();
@@ -19,7 +25,13 @@ const MoviesPage = () => {
     <Container>
       <Header />
       <Styled.MovieCardGrid>
-        {movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
+        {movies.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            {...movie}
+            onDelete={() => onDelete(movie.id)}
+          />
+        ))}
       </Styled.MovieCardGrid>
     </Container>
 

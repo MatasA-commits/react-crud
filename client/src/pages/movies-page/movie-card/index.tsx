@@ -9,9 +9,10 @@ import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import Img from 'components/ui/img';
 import * as Styled from './styled';
-import ApiService from '../../../services/api-service';
 
-type MovieCardProps = MovieModel;
+type MovieCardProps = MovieModel & {
+  onDelete: VoidFunction
+};
 
 const MovieCard: React.FC<MovieCardProps> = (
   {
@@ -21,6 +22,7 @@ const MovieCard: React.FC<MovieCardProps> = (
     images,
     year,
     rating,
+    onDelete,
   },
 ) => {
   const navigate = useNavigate();
@@ -28,7 +30,12 @@ const MovieCard: React.FC<MovieCardProps> = (
     <Stack sx={{ boxShadow: 3, position: 'relative' }}>
       <Img src={images[0]} alt="" sx={{ aspectRatio: '1.42', width: 1 }} />
       <Styled.AdminActions>
-        <Button variant="contained" color="warning" size="small">
+        <Button
+          variant="contained"
+          color="warning"
+          size="small"
+          onClick={() => navigate(routes.MovieUpdatePage.createLink(id))}
+        >
           Update
         </Button>
         <Button
@@ -36,10 +43,7 @@ const MovieCard: React.FC<MovieCardProps> = (
           color="error"
           size="small"
           id={id}
-          onClick={(event) => {
-            ApiService.deleteMovie(event.currentTarget.id);
-            window.location.reload();
-          }}
+          onClick={onDelete}
         >
           Delete
         </Button>

@@ -9,6 +9,8 @@ const api = axios.create({
   },
 });
 
+type PostMovieProps = Omit<MovieModel, 'id'>;
+
 const fetchMovies = async () => {
   const { data } = await api.get<MovieModel[]>('/movies');
   return data;
@@ -20,7 +22,7 @@ const fetchMovie = async (id: string | number) => {
   return data;
 };
 
-const postMovie = async (movieData: MovieModel) => {
+const postMovie = async (movieData: PostMovieProps) => {
   await api.post('/movies', movieData);
 };
 
