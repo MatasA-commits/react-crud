@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { useParams, Navigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import useMovie from '../../hooks/useMovie';
+import SingleMovieCard from './single-movie-layout';
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -10,9 +11,11 @@ const MoviePage = () => {
 
   if (id === undefined) return <Navigate to={routes.MoviesPage} />;
 
+  if (movie === undefined) return null;
+
   return (
-    <Box component="pre">
-      {JSON.stringify(movie, null, 4)}
+    <Box>
+      {movie && <SingleMovieCard {...movie} />}
     </Box>
   );
 };

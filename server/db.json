@@ -135,53 +135,14 @@
       "title": "test",
       "main_character": {
         "actor": "test",
-        "role": "est"
-      },
-      "images": [
-        "test"
-      ],
-      "year": "1999",
-      "rating": 2.5,
-      "id": "esge5yW"
-    },
-    {
-      "title": "test",
-      "main_character": {
-        "actor": "test",
         "role": "test"
       },
       "images": [
         "https://m.media-amazon.com/images/M/MV5BMDE0ZjMzOTAtMzU2OS00ZDVmLWFlMjYtMThlOWYwMDBiN2E3XkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg"
       ],
       "year": "1999",
-      "rating": 1.5,
+      "rating": 1.7,
       "id": "HnfaWv-"
-    },
-    {
-      "title": "test",
-      "main_character": {
-        "actor": "test",
-        "role": "test"
-      },
-      "images": [
-        "test"
-      ],
-      "year": "1999",
-      "rating": 2.6,
-      "id": "DfJpArO"
-    },
-    {
-      "title": "test",
-      "main_character": {
-        "actor": "test",
-        "role": "test"
-      },
-      "images": [
-        "test"
-      ],
-      "year": "1999",
-      "rating": 2.6,
-      "id": "23eWqFr"
     }
   ]
 }
