@@ -8,6 +8,8 @@ import {
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import Img from 'components/ui/img';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import * as Styled from './styled';
 
 type MovieCardProps = MovieModel & {
@@ -36,7 +38,7 @@ const MovieCard: React.FC<MovieCardProps> = (
           size="small"
           onClick={() => navigate(routes.MovieUpdatePage.createLink(id))}
         >
-          Update
+          <EditIcon />
         </Button>
         <Button
           variant="contained"
@@ -45,7 +47,7 @@ const MovieCard: React.FC<MovieCardProps> = (
           id={id}
           onClick={onDelete}
         >
-          Delete
+          <DeleteIcon />
         </Button>
       </Styled.AdminActions>
       <Styled.ContentWrapper>

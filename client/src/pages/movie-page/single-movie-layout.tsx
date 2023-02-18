@@ -27,8 +27,8 @@ const SingleMovieCard: React.FC<SingleMovieCardProps> = ({
     >
       {title}
     </Typography>
-    <Box display="flex" gap={3}>
-      <Box width={500}>
+    <Styled.CardLayout>
+      <Box maxWidth={500}>
         <Swiper navigation modules={[Navigation]}>
           {
             images.map((img) => (
@@ -43,19 +43,12 @@ const SingleMovieCard: React.FC<SingleMovieCardProps> = ({
           }
         </Swiper>
       </Box>
-      <Box
-        display="flex"
-        flexDirection="column"
-        gap={1.4}
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Styled.InfoLayout>
         <Styled.Rating>{`Rating: ${rating}`}</Styled.Rating>
-
         <Typography fontSize="1.3rem">{`Starring ${main_character.actor} as "${main_character.role}"`}</Typography>
         <Typography>{`Released: ${year}`}</Typography>
-      </Box>
-    </Box>
+      </Styled.InfoLayout>
+    </Styled.CardLayout>
   </Box>
 
 );
